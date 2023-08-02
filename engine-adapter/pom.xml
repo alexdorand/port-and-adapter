@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>port-and-adapter</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>engine-adapter</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${version.lombok}</version>
+        </dependency>
+
+        <!-- Override Spring Data release train provided by Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>3.1.1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>engine-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-sqs -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-sqs</artifactId>
+            <version>1.12.518</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-sqs -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-sns</artifactId>
+            <version>1.12.518</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-eventbridge -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-eventbridge</artifactId>
+            <version>1.12.518</version>
+        </dependency>
+
+
+    </dependencies>
+</project>
